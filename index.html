@@ -1,6 +1,24 @@
 <html>
 
 <style>
+
+	@media screen and (orientation: portrait){
+		html{
+			//overflow: hidden;
+		}
+		
+		#skygif{
+			transform: rotate(-90deg);
+			transform-origin: center;
+			translate: -30vw 20vh;
+		}
+		#penisgif{
+			transform: rotate(-90deg);
+			transform-origin: center;
+			translate: -30vw 20vh;
+		}
+	}
+
 	body{
 		background-color: ffffff;
 	}
@@ -58,21 +76,21 @@
 	var button = document.getElementById("playButton");
 	var skyGif = document.getElementById("skygif");
 	var peenGif = document.getElementById("penisgif");
-	button.requestFullscreen();
+	
 	function playMusic(){
 		player.play();
 		playButton.remove();
 		document.body.style.backgroundColor = "06041c";
-		skyGif.style.width = "100%";
-		skyGif.style.height = "100%";
+		skyGif.style.width = "95vmax";
+		skyGif.style.height = "95vmin";
 		skyGif.style.visibility = 'visible';
 		setTimeout(showPeen, 24500);
 	}
 	
 	function showPeen(){
 		skyGif.remove();
-		peenGif.style.width = "100%";
-		peenGif.style.height = "100%";
+		peenGif.style.width = "95vmax";
+		peenGif.style.height = "95vmin";
 		peenGif.style.visibility = "visible";
 	}
 </script>
